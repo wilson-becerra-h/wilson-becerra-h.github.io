@@ -1,22 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilson Alexis Becerra Herrera</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 { color: #58a6ff; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Wilson Becerra | Psicometría y ciencia de datos</title>
+<meta name="description" content="Wilson Alexis Becerra Herrera. Psicólogo interesado en psicometría, ciencia de datos e inteligencia artificial. Proyectos y recursos en R y Python.">
+<meta property="og:title" content="Wilson Alexis Becerra Herrera">
+<meta property="og:description" content="Psicometría, ciencia de datos e inteligencia artificial. Proyectos y recursos en R y Python.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 24'%3E%3Cpath d='M1 22C7 22 8 3 14 3s7 19 13 19' fill='none' stroke='%231847B8' stroke-width='2.5'/%3E%3Cpath d='M6 22C12 22 13 3 19 3s7 19 13 19' fill='none' stroke='%23B35F0E' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Wilson Alexis Becerra Herrera</h1>
-    <p>Analista Cuantitativo & Estadístico | Psicometría y Modelado</p>
+<a class="skip" href="#main" id="skip">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#/" aria-label="Wilson Becerra, ir al inicio">
+      <svg viewBox="0 0 32 24" aria-hidden="true"><path class="c1" d="M1 22C7 22 8 3 14 3s7 19 13 19"/><path class="c2" d="M6 22C12 22 13 3 19 3s7 19 13 19"/></svg>
+      <span>Wilson Becerra</span>
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><g class="b"><path d="M4 7h16M4 12h16M4 17h16"/></g><g class="x"><path d="M6 6l12 12M18 6L6 18"/></g></svg>
+    </button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#/" data-route="home">Home</a>
+      <a href="#/proyectos" data-route="proyectos">Proyectos</a>
+      <a href="#/recursos" data-route="recursos">Recursos</a>
+      <a href="#/contacto" data-route="contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<noscript><p>Esta página necesita JavaScript para mostrar su contenido.</p></noscript>
+
+<main id="main" tabindex="-1">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="page" data-page="home" hidden>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <h1 tabindex="-1" id="h-nombre"></h1>
+          <p class="role" id="h-rol"></p>
+          <p class="intro" id="h-intro"></p>
+          <div class="actions">
+            <a class="btn primary" href="#/proyectos">Ver proyectos</a>
+            <a class="btn" href="#/contacto">Contacto</a>
+          </div>
+        </div>
+        <svg class="art" id="art" viewBox="0 0 480 290" role="img" aria-label="Dos distribuciones normales solapadas, ruido y señal, separadas por un criterio de decisión"></svg>
+      </div>
+
+      <div class="section" id="h-areas-box" hidden>
+        <div class="areas" id="h-areas"></div>
+      </div>
+
+      <div class="section" id="h-proyectos-box" hidden>
+        <div class="sec-head"><h2 class="sec">Proyectos</h2><a class="more" href="#/proyectos">Ver todos</a></div>
+        <div class="grid" id="h-proyectos"></div>
+      </div>
+
+      <div class="section" id="h-recursos-box" hidden>
+        <div class="sec-head"><h2 class="sec">Recursos recientes</h2><a class="more" href="#/recursos">Ver todos</a></div>
+        <div class="grid" id="h-recursos"></div>
+      </div>
+
+      <div class="section">
+        <div class="cta">
+          <div>
+            <h2>¿Hablamos?</h2>
+            <p>Para comentar un proyecto, una duda o una colaboración.</p>
+          </div>
+          <a class="btn primary" href="#/contacto">Ir a contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROYECTOS ===================== -->
+  <section class="page" data-page="proyectos" hidden>
+    <div class="wrap">
+      <div class="page-head">
+        <h1 tabindex="-1">Proyectos</h1>
+        <p class="lead">Trabajos de análisis de datos, psicometría y modelado. Voy subiendo material poco a poco.</p>
+      </div>
+      <div class="filters" id="p-filtros" hidden></div>
+      <div class="grid" id="p-lista"></div>
+      <div class="empty" id="p-vacio" hidden>
+        <h2>Los primeros proyectos llegan pronto</h2>
+        <p>Estoy preparando el material para publicarlo aquí. Mientras tanto, puedes ver mi código en GitHub o revisar los scripts de la sección de recursos.</p>
+        <div class="actions" style="margin-top:20px">
+          <a class="btn primary" id="p-gh" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+          <a class="btn" href="#/recursos">Ir a recursos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RECURSOS ===================== -->
+  <section class="page" data-page="recursos" hidden>
+    <div class="wrap">
+      <div class="page-head">
+        <h1 tabindex="-1">Recursos</h1>
+        <p class="lead">Scripts, plantillas y enlaces que uso en mi trabajo. Puedes verlos, copiarlos y descargarlos.</p>
+      </div>
+      <div class="filters" id="r-filtros" hidden></div>
+      <div class="grid" id="r-lista"></div>
+      <div class="empty" id="r-vacio" hidden>
+        <h2>Aún no hay recursos</h2>
+        <p>Cuando publique el primero aparecerá aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="page" data-page="contacto" hidden>
+    <div class="wrap">
+      <div class="page-head">
+        <h1 tabindex="-1">Contacto</h1>
+        <p class="lead">Escríbeme para comentar un proyecto, resolver una duda de psicometría o hablar de una posible colaboración.</p>
+      </div>
+      <div class="contact-grid">
+        <ul class="rows" id="c-filas"></ul>
+        <p class="place" id="c-lugar"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="pie"></span>
+    <nav id="pie-nav" aria-label="Enlaces externos"></nav>
+  </div>
+</footer>
+
+<dialog id="visor" aria-labelledby="v-titulo">
+  <div class="d-head">
+    <div>
+      <h3 id="v-titulo"></h3>
+      <small id="v-lang"></small>
+    </div>
+    <button class="btn" type="button" id="v-cerrar">Cerrar</button>
+  </div>
+  <div class="d-body"><pre id="v-codigo" tabindex="0"></pre></div>
+  <div class="d-foot">
+    <button class="btn primary" type="button" id="v-copiar">Copiar código</button>
+    <button class="btn" type="button" id="v-bajar">Descargar</button>
+  </div>
+</dialog>
+
+
+<script src="js/datos.js"></script>
+<script src="js/codigo.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
